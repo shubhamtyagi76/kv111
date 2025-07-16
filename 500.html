@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Error - Vyomexa.ai™</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .animate-pulse-slow { animation: pulse 3s ease-in-out infinite; }
+        .animate-bounce-slow { animation: bounce 2s ease-in-out infinite; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0db2e9',
+                        secondary: '#b2fefa'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center">
+    <div class="text-center px-4 max-w-2xl mx-auto">
+        <div class="mb-8">
+            <i class="fas fa-exclamation-triangle text-8xl text-red-500 mb-6 animate-pulse-slow"></i>
+            <h1 class="text-8xl font-bold text-white mb-4">500</h1>
+            <h2 class="text-3xl font-semibold text-red-400 mb-6">Server Error</h2>
+        </div>
+        
+        <div class="mb-8">
+            <p class="text-white/80 text-lg mb-6 leading-relaxed">
+                Something went wrong on our end. Our AI engineering team has been notified 
+                and is working to resolve this issue as quickly as possible.
+            </p>
+            
+            <div class="bg-red-500/10 backdrop-blur-sm rounded-xl p-6 border border-red-500/20 mb-8">
+                <h3 class="text-xl font-semibold text-white mb-4">What happened?</h3>
+                <ul class="text-white/70 space-y-2 text-left">
+                    <li class="flex items-center">
+                        <i class="fas fa-server text-red-400 mr-3"></i>
+                        Our servers encountered an unexpected error
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-tools text-red-400 mr-3"></i>
+                        Our team has been automatically notified
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-clock text-red-400 mr-3"></i>
+                        We're working to fix this immediately
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-shield-alt text-red-400 mr-3"></i>
+                        Your data is safe and secure
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="space-y-4">
+            <button onclick="window.location.reload()" class="inline-block bg-gradient-to-r from-red-500 to-pink-400 text-white px-8 py-4 rounded-xl font-semibold hover:from-red-600 hover:to-pink-500 transition-all duration-200 transform hover:scale-105">
+                <i class="fas fa-redo mr-2"></i>
+                Try Again
+            </button>
+            
+            <a href="/" class="inline-block bg-gradient-to-r from-primary to-secondary text-black px-8 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-cyan-400 transition-all duration-200 transform hover:scale-105 ml-4">
+                <i class="fas fa-home mr-2"></i>
+                Back to Home
+            </a>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+                <a href="mailto:vyomexa.ai@gmail.com" class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all duration-200 flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Report Issue
+                </a>
+                
+                <a href="tel:+917891159369" class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all duration-200 flex items-center justify-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    Emergency Support
+                </a>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-white/20">
+                <p class="text-white/60 text-sm">
+                    If the problem persists, contact us immediately at 
+                    <a href="mailto:vyomexa.ai@gmail.com" class="text-primary hover:text-secondary transition-colors">vyomexa.ai@gmail.com</a>
+                    or call 
+                    <a href="tel:+917891159369" class="text-primary hover:text-secondary transition-colors">+91 78911 59369</a>
+                </p>
+                <p class="text-white/40 text-xs mt-2">
+                    Error ID: VYX-500-<span id="error-id"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating error indicators -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-red-500 rounded-full opacity-30 animate-ping"></div>
+        <div class="absolute top-3/4 right-1/4 w-1 h-1 bg-red-400 rounded-full opacity-40 animate-pulse"></div>
+        <div class="absolute top-1/2 left-3/4 w-3 h-3 bg-red-500 rounded-full opacity-20 animate-bounce-slow"></div>
+        <div class="absolute bottom-1/4 left-1/2 w-2 h-2 bg-red-400 rounded-full opacity-30 animate-ping" style="animation-delay: 1s;"></div>
+    </div>
+
+    <script>
+        // Generate unique error ID
+        document.getElementById('error-id').textContent = Date.now().toString(36).toUpperCase();
+        
+        // Auto-refresh after 30 seconds
+        setTimeout(() => {
+            window.location.reload();
+        }, 30000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Vyomexa.ai™</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0db2e9',
+                        secondary: '#b2fefa'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center">
+    <div class="text-center px-4 max-w-2xl mx-auto">
+        <div class="mb-8 animate-float">
+            <i class="fas fa-robot text-8xl text-primary mb-6"></i>
+            <h1 class="text-8xl font-bold text-white mb-4">404</h1>
+            <h2 class="text-3xl font-semibold text-secondary mb-6">Page Not Found</h2>
+        </div>
+        
+        <div class="mb-8">
+            <p class="text-white/80 text-lg mb-6 leading-relaxed">
+                Oops! The page you're looking for seems to have vanished into the digital void. 
+                Our AI is working around the clock to bring it back!
+            </p>
+            
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-8">
+                <h3 class="text-xl font-semibold text-white mb-4">What can you do?</h3>
+                <ul class="text-white/70 space-y-2 text-left">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-primary mr-3"></i>
+                        Check the URL for any typos
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-primary mr-3"></i>
+                        Go back to our homepage
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-primary mr-3"></i>
+                        Contact our support team
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-primary mr-3"></i>
+                        Explore our AI services
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="space-y-4">
+            <a href="/" class="inline-block bg-gradient-to-r from-primary to-secondary text-black px-8 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-cyan-400 transition-all duration-200 transform hover:scale-105">
+                <i class="fas fa-home mr-2"></i>
+                Back to Home
+            </a>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+                <a href="mailto:vyomexa.ai@gmail.com" class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all duration-200 flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Contact Support
+                </a>
+                
+                <a href="tel:+917891159369" class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-all duration-200 flex items-center justify-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call Us
+                </a>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-white/20">
+                <p class="text-white/60 text-sm">
+                    Need immediate assistance? 
+                    <a href="mailto:vyomexa.ai@gmail.com" class="text-primary hover:text-secondary transition-colors">vyomexa.ai@gmail.com</a>
+                    or call 
+                    <a href="tel:+917891159369" class="text-primary hover:text-secondary transition-colors">+91 78911 59369</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating particles animation -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full opacity-30 animate-ping"></div>
+        <div class="absolute top-3/4 right-1/4 w-1 h-1 bg-secondary rounded-full opacity-40 animate-pulse"></div>
+        <div class="absolute top-1/2 left-3/4 w-3 h-3 bg-primary rounded-full opacity-20 animate-bounce"></div>
+        <div class="absolute bottom-1/4 left-1/2 w-2 h-2 bg-secondary rounded-full opacity-30 animate-ping" style="animation-delay: 1s;"></div>
+    </div>
+</body>
+</html>
