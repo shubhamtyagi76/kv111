@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram UI Clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #fafafa;
+    }
+    .navbar {
+      background: #fff;
+      border-bottom: 1px solid #dbdbdb;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar img {
+      height: 40px;
+    }
+    .navbar input {
+      border: 1px solid #dbdbdb;
+      padding: 6px 12px;
+      border-radius: 5px;
+    }
+    .navbar .icons i {
+      font-size: 20px;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    .feed {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      border: 1px solid #dbdbdb;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .feed img {
+      width: 100%;
+    }
+    .feed .actions {
+      padding: 10px;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" height="30">
+    <input type="text" placeholder="Search">
+    <div class="icons">
+      <i class="fa fa-home"></i>
+      <i class="fa fa-paper-plane"></i>
+      <i class="fa fa-plus-square"></i>
+      <i class="fa fa-compass"></i>
+      <i class="fa fa-heart"></i>
+    </div>
+  </div>
+
+  <div class="feed">
+    <img src="https://source.unsplash.com/800x600/?nature" alt="Post">
+    <div class="actions">
+      <i class="fa fa-heart"></i>
+      <i class="fa fa-comment"></i>
+      <i class="fa fa-share"></i>
+    </div>
+  </div>
+
+</body>
+</html>
